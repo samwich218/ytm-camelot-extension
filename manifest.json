@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Camelot Key",
+  "version": "0.1.0",
+  "description": "Shows Camelot key (DJ key) next to songs on YouTube Music using MusicBrainz + AcousticBrainz.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://api.getsong.co/*",
+    "https://api.getsongbpm.com/*",
+    "https://musicbrainz.org/ws/2/*",
+    "https://acousticbrainz.org/api/v1/*"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "YouTube Music Camelot Key"
+  }
+  
+}

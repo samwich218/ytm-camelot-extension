@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YTM Camelot – Settings</title>
+    <style>
+      body { font: 14px system-ui, sans-serif; padding: 16px; max-width: 720px; }
+      input { width: 100%; padding: 10px; font-size: 14px; }
+      button { padding: 10px 14px; margin-top: 10px; }
+      .hint { color: #666; margin-top: 8px; }
+      .ok { color: #0a7; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <h2>GetSongBPM API key</h2>
+    <p>
+      Create a free key at GetSongBPM → API page, then paste it here.
+      (They require a backlink for free usage — see their API page.) :contentReference[oaicite:2]{index=2}
+    </p>
+    <input id="k" placeholder="Paste API key here" />
+    <button id="save">Save</button>
+    <div id="msg" class="hint"></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
